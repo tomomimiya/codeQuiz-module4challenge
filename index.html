@@ -1,35 +1,86 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
+  <head>
+    <title>Code Quiz</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./assets/style.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8"/>
-    <link rel="stylesheet" href="./assets/style.css">
-    <title>code quiz challenge module 04</title>
-</head>
-
-<body>
-    <div id= "score">
-        <p>View high score</p>
-    </div>
-
-    <div id="countdown"></div>
-
-    <div class="container">
-        <div class="question">Question</div>
-        <div class="answer-buttons">
-            <button class="btn">answer1</button>
-            <button class="btn">answer2</button>
-            <button class="btn">answer3</button>
-            <button class="btn">answer4</button>
+  <body>
+    <header>
+        <div class="header">
+            <!--high score button-->
+            <div>
+                <button class="button" id="score_check">View Highscores</button>
+            </div>
+            <!--time left-->
+            <div>
+                <p id="timer"> Time left: 60 s</p>
+            </div>
         </div>
-    </div>
+    </header>
 
-    <div class="controls">
-        <button id="start-button" class="start-button"></button>
-        <button id="submit-button" class="submit-button"></button>
-        <button id="goback-button" class="goback-button"></button>
-    </div>
+    <main>
+        <div>
+            <!--first page-->
+            <section class="intro_page" id="intro_page">
+                <div id="introduction">
+                    <h1>
+                        Welcome to Coding Quiz Challenge
+                    </h1>
+                    <p id="instruction">
+                        This is a simple quiz on coding, try answering within the time limit!
+                    </p>
+                    <button class="button" id="start_button">Start Quiz</button>
+                </div>
+            </section>
 
-</body>
+            <!--questions-->
+            <section class="question_page" id="question_page">
+                <div>
+                    <div>
+                        <h2 id = "ask_question">Ask the question</h2>
+                        <ul class ="ans_button">
+                            <li><button class ="choices button" id="answer_btn1" value="a">Answer1</button></li>
+                            <li><button class ="choices button" id="answer_btn2" value="b">Answer2</button></li>
+                            <li><button class ="choices button" id="answer_btn3" value="c">Answer3</button></li>
+                            <li><button class ="choices button" id="answer_btn4" value="d">Answer4</button></li>
+                        </ul>
+                    <div>
 
+                    <!--correct or wrong-->
+                    <div id="check_line">
+                        <p>Correct or Wrong</p>
+                    </div>
+                </div>
+            </section>
+
+            <!--last page-->
+            <section class="submit_page" id="submit_page">
+                <div>
+                    <h2 id="finish">All Done!</h2>
+                    <p id = "final_score">Your final score is: </p>
+                    <p>Enter initials
+                        <input id="initial">
+                        <button class="button" id="submit_btn">Submit</button>
+                    </p>
+                </div>
+            </section>
+
+            <!--high score link-->
+            <section class="highscore_page" id ="highscore_page">
+                <div>
+                    <h2>High Scores</h2>
+                    <div id="score_record"><p>Your record</p></div><br><br>
+                    <div>
+                        <button class="button" id="back_btn">Go back</button>
+                        <button class="button" id="clear_btn">Clear Highscores</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="./assets/script.js"></script>
+  </body>
 </html>

@@ -1,3 +1,46 @@
 body {
-    background-color: lightcyan
+    background-color: bisque;
+    padding: 0;
+    margin: 5%;
+    font-family: 'Montserrat', sans-serif;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#score-check {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    display: inline-block;
+    margin: 10px;
+    padding: 7px;
+    font-size: 100%;
+    border-radius: 20px;
+    background-color: burlywood;
+    color: black;
+}
+
+.ans_button {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+  
 }
